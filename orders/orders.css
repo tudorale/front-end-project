@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    --sidebar: #1C213E;
+    --text: #A2A5BF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+p{
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    background-color: #1C213E;
+    width: 100%;
+}
+
+.active {
+    color: white !important;
+    fill: white !important;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 17% 83%;
+}
+
+.left-menu{
+    background: var(--sidebar);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: -45px;
+}
+
+
+.left-menu .name {
+    color: var(--text);
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-left: -32px;
+    letter-spacing: 2px;
+}
+
+.switch{
+    margin-top: 20px;
+    width: fit-content;
+    background:  #8392FF;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #1C213E;
+    position: absolute;
+    top: 340px;
+    box-shadow: 0px 5px 10px #8392FF;
+}
+
+.left-menu .nav{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: start;
+    justify-content: center;
+    width: fit-content;
+}
+
+.left-menu .nav a{
+    color: #9098D8;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    font-weight: 500;
+    transition: all 350ms ease;
+}
+
+.left-menu .nav a:hover, .left-menu .nav a:hover svg{
+    color: #fff;
+    fill: #fff;
+}
+
+.left-menu .nav a svg{
+    fill: #9098D8;
+    margin-right: 10px;
+    transition: all 350ms ease;
+}
+
+.externalWrapper {
+    border-bottom: 0.1px solid #9098d82a;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+
+.admin-buttons{
+    flex-direction: column;
+    margin-left: 30px;
+    align-items: center;
+    display: none;
+    
+}
+
+.admin-buttons button {
+        margin-top: 20px;
+        width: 140px;
+        background:#8392FF;
+        color: #1C213E;
+        border-radius: 30px;
+        border: none;
+        display: flex;
+        padding: 5px 15px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 0.97rem;
+        align-items: center;
+        box-shadow: 0px 5px 7px #8392FF;
+}
+
+.admin-buttons button svg {
+    width: 30px;
+    margin-right: 3px;
+    fill: #1C213E;
+}
+
+.admin-buttons button:nth-child(2){
+    font-size: .9rem;
+    text-align: center;
+    width: 130px;
+    height: 40px;
+    word-spacing: 0px;
+    display: block;
+}
+
+.admin-buttons button p:nth-child(2){
+    margin-top: -9px;
+}
+
+.panels{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    z-index: 99;
+}
+
+.positions{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.customizeBox, .addItemBox {
+    background: #eaecf7;
+    flex-direction: column;
+    padding: 30px 50px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    margin-right: 50px;
+    display: none;
+}
+
+
+.customizeBox .info p, .addItemBox .info p {
+    color: #1c213e;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.customizeBox .info p:nth-child(2){
+    margin-top: -15px;
+}
+
+.customizeBox div:nth-child(2){
+    margin-top: 20px;
+}
+
+.customizeBox input {
+    background: white;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    width: 280px;
+    margin-top: 19px;
+    height: 38px;
+    color: #1c213e;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 5px 15px;
+    outline: none;
+}
+
+.confirmBtn, .confirmBtnItem {
+    margin-top: 25px;
+    outline: none;
+    color: white;
+    background: #2c3681;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+}
+
+.addItemBox input[type=text], #category {
+    background: white;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    width: 280px;
+    margin-top: 10px;
+    height: 38px;
+    color: #1c213e;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 5px 15px;
+    outline: none;
+}
+
+.addItemBox input::placeholder
+{
+    color: #1c213e;
+}
+
+.addItemBox .info p {
+    margin-bottom: 15px;
+}
+
+.addItemBox input[type=checkbox]{
+    margin-top: 15px;
+}
+
+.toggle label {
+    color: #1C213E;
+    font-weight: 500;
+}
+
+.attachImage {
+    margin-top: 5px;
+    outline: none;
+    color: #2c3681;
+    background: #aab4ff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+}
+
+.confirmBtnItem{
+    margin-top: 15PX;
+}
+
+.icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #1C213E;
+    padding: 14px 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.icons svg {
+    fill: #fff;
+    margin: 0 7px;
+}
+
+.img-profile {
+    border-radius: 50%;
+    width: 26px;
+    margin-left: 7px;
+}
+
+.right-menu {
+    background: #242A4B;
+    border-top-left-radius: 50px;
+    padding: 80px 70px;
+}
+
+.orders h1 {
+    color: #9098D8;
+    font-size: 2.3rem;
+}
+
+.orders .info{
+    color: #9098D8;
+    font-size: 1.3rem;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.orders-menu{
+    font-size: 1.25rem;
+    display: flex;
+    color: white;
+    margin-top: 25px;
+}
+
+.orders-menu p {
+    cursor: pointer;
+    margin-right: 40px;;
+}
+
+.table{
+    margin-top: 30px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 130px 190px 200px 130px 130px 130px 130px;
+}
+
+.header div{
+    color: #9098D8;
+    font-weight: 600;
+}
+
+.header div:nth-child(4){
+    margin-left: -30px;
+}
+
+.row{
+    display: grid;
+    background: #444967;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-left: -15px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    grid-template-columns: 130px 190px 170px 130px 130px 130px 130px;
+}
+
+.row-name{
+    display: flex;
+    margin-left: -10px;
+}
+
+.row-name img{
+    margin-right: 5px;
+}
+
+.row div {
+    color: #fff;
+    font-weight: 600;
+    text-align: start;
+}
+
+.table .bar{
+    width: 100%;
+    height: 1px;
+    background: #9098d849;
+    margin-left: -15px;
+    margin-top: 10px;;
+}
+
+.table .bar::after{
+    content: "";
+    width: 35px;
+    height: 3px;
+    background: #8997ff;
+    position: absolute;
+    margin-top: -1.5px;
+    margin-left: 95px;
+    box-shadow: 0px 1px 5px #8392FF;
+}
