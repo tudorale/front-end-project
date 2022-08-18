@@ -40,6 +40,19 @@ addItemBtn.addEventListener('click', () => {
     }
 })
 
+// close panels from X
+
+let closeCustomize = document.querySelector(".closeCustomize")
+let closeAddItem= document.querySelector(".closeAddItem")
+
+closeCustomize.addEventListener('click', () => {
+    box.style.display = "none";
+    statusCustomize = false;
+})
+closeAddItem.addEventListener('click', () => {
+    boxAddItem.style.display = "none";
+    statusAddItem = false;
+})
 
 // buy panel
 let bg = document.querySelector(".addon");
@@ -49,14 +62,37 @@ let refuseBtn = document.querySelector(".no");
 
 let image = document.querySelectorAll(".homePageColumn");
 
-image.forEach((div) => {
-    div.addEventListener("click", () => {
-        buyPanel.style.display = "flex";
-        bg.style.display = "block";
+if(buyPanel){
+    image.forEach((div) => {
+        div.addEventListener("click", () => {
+            buyPanel.style.display = "flex";
+            bg.style.display = "block";
+        })
     })
-})
+    
+    refuseBtn.addEventListener("click", () => {
+        buyPanel.style.display = "none";
+        bg.style.display = "none";
+    })
+    
+}
 
-refuseBtn.addEventListener("click", () => {
-    buyPanel.style.display = "none";
+
+// navbar 
+
+let closeMenu = document.querySelector(".closeMenu");
+let openMenu = document.querySelector(".openMenu");
+let navbar = document.querySelector(".left-menu")
+
+openMenu.addEventListener("click", () => {
+    navbar.style.left = "0";
+    closeMenu.style.top = "-10px"
+    bg.style.display = "block";
+
+})
+closeMenu.addEventListener("click", () => {
+    navbar.style.left = "-500px";
+    closeMenu.style.top = "-50px";
     bg.style.display = "none";
+
 })
