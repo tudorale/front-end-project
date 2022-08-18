@@ -219,7 +219,7 @@
     display: flex;
 }
 
-button{
+.buyButtons button{
     border: none;
     color: white;
     font-size: 1.1rem;
@@ -242,4 +242,26 @@ button{
     height: 0.007cm;
     background: #2c36813a;
     margin: 10px 0px;
+}
+
+
+.itemButtons {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+    DISPLAY: NONE;
+}
+
+.itemButtons button {
+    border: none;
+    color: white;
+    font-size: 1rem;
+    background: #7182FF;
+    border-radius: 15px;
+    padding: 2px 25px;
+    cursor: pointer;
+}
+
+.delete {
+    background:#e94b68 !important;
 }

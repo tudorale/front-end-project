@@ -7,6 +7,17 @@ btn.addEventListener('click', () => {
     let wrapper = document.querySelector(".admin-buttons");
     wrapper.style.display = "flex";
     btn.style.display = "none";
+
+    let claimText = document.querySelectorAll(".claim");
+    let itemButtons = document.querySelectorAll(".itemButtons");
+
+    claimText.forEach(element => {
+        element.style.display = "none"
+    });
+
+    itemButtons.forEach(element => {
+        element.style.display = "flex";
+    })
 })
 
 // customize panel and addItem box
@@ -60,7 +71,7 @@ let bg = document.querySelector(".addon");
 let buyPanel = document.querySelector(".buyPanel");
 let refuseBtn = document.querySelector(".no");
 
-let image = document.querySelectorAll(".homePageColumn");
+let image = document.querySelectorAll(".wl-image");
 
 if(buyPanel){
     image.forEach((div) => {

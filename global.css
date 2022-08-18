@@ -147,6 +147,15 @@ body{
     margin-top: -9px;
 }
 
+.admin-buttons button:nth-child(3){
+    font-size: .9rem;
+    text-align: center;
+    width: 130px;
+    height: 40px;
+    word-spacing: 0px;
+    display: block;
+}
+
 .panels{
     position: fixed;
     top: 50%;
