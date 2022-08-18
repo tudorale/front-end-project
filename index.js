@@ -1,3 +1,4 @@
+
 // admin mode switch (mainly for preview)
 
 let btn = document.querySelector(".switch");
@@ -8,7 +9,7 @@ btn.addEventListener('click', () => {
     btn.style.display = "none";
 })
 
-// customize panel
+// customize panel and addItem box
 
 let customizeBtn = document.querySelector(".customize");
 let box = document.querySelector(".customizeBox");
@@ -33,8 +34,29 @@ addItemBtn.addEventListener('click', () => {
 
     if(statusAddItem){
         boxAddItem.style.display = "flex";
+
     }else {
         boxAddItem.style.display = "none";
     }
 })
 
+
+// buy panel
+let bg = document.querySelector(".addon");
+
+let buyPanel = document.querySelector(".buyPanel");
+let refuseBtn = document.querySelector(".no");
+
+let image = document.querySelectorAll(".homePageColumn");
+
+image.forEach((div) => {
+    div.addEventListener("click", () => {
+        buyPanel.style.display = "flex";
+        bg.style.display = "block";
+    })
+})
+
+refuseBtn.addEventListener("click", () => {
+    buyPanel.style.display = "none";
+    bg.style.display = "none";
+})
